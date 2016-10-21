@@ -41,26 +41,23 @@ As a user, I want to page through a list of relief efforts.  Relief efforts shou
 
 Request a simple list of relief efforts sorted by name.  Default `sortby` value is `name`.  The following two examples will retrieve the same results.  By default the response will be limited to 5 records per page.
 
-```
 [GET /reliefefforts](http://relief-service.cfapps.io/reliefefforts)
 
 [GET /reliefefforts?sortby=name](http://relief-service.cfapps.io/reliefefforts?sortby=name)
-```
+
 ** List with limit example**
 
 Request a list of relief efforts by name and limit to 3 records per page.
 
-```
 [GET /reliefefforts?sortby=name&limit=3](http://relief-service.cfapps.io/reliefefforts?sortby=name&limit=3)
-```
 
 ** List with pagination example **
 
 Request the first page of relief effort sorted by name and limited to 3 records.
 
-```
 [GET /reliefefforts?sortby=name&limit=3](http://relief-service.cfapps.io/reliefefforts?sortby=name&limit=3)
 
+```
 [
   {
     "_id": "relief_St_Phillips_Dominican_Republic_2016",
@@ -107,14 +104,13 @@ Request the first page of relief effort sorted by name and limited to 3 records.
     "map": [ ... ]
   }
 ]
-
 ```
 
 Request the next page relief efforts using the `name` value of the last item in the previous page as the `startkey` value.  This skips the previous documents and provides performant pagination.  
 
-```
 [GET /reliefefforts?limit=3&sortby=name&startkey=Haiti+2015](http://relief-service.cfapps.io/reliefefforts?limit=3&sortby=name&startkey=Haiti+2015)
 
+```
 [
   {
     "_id": "relief_St_Phillips_Haiti_2017",
@@ -190,9 +186,9 @@ As a user, I want to view all the details about a relief effort such as start da
 
 Get a single relief effort using the `_id` of a relief effort in the route.
 
-```
 [GET /reliefefforts/relief_St_Phillips_Haiti_2017](http://relief-service.cfapps.io/reliefefforts/relief_St_Phillips_Haiti_2017)
 
+```
 {
   "_id": "relief_St_Phillips_Haiti_2017",
   "_rev": "7-c7aeee7ef23c4f5d30169dc57897e089",
