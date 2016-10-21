@@ -21,6 +21,6 @@ npm start
 ## Documentation
 
 - [User Stories](/user-stories.md)
-- [Basics](/basic.md)
+- [Basics](/basics.md)
 - [API Endpoints](/api.md)
 - [Entity Reference](/entity-reference.md)
