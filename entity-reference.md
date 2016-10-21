@@ -1,5 +1,7 @@
 # Entity Reference
 
+[Home](/README.md)  
+
 ## Relief Effort
 
 In no sql mode, a relief effort document includes a `_rev` value:
@@ -96,3 +98,6 @@ In no sql mode, a relief effort document includes a `_rev` value:
   ]
 }
 ```
+
+---
+[Home](/README.md)  

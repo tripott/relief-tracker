@@ -1,11 +1,13 @@
 # Basics
 
+[Home](/README.md)   
+
 ## Base URL
 
 <table>
   <tr>
     <th>Base URL</th>
-    <th>`http://relief-service.cfapps.io/`</th>
+    <th>http://relief-service.cfapps.io/</th>
   </tr>
 </table>
 
@@ -155,3 +157,6 @@ GET /reliefefforts?limit=3&sortby=name&startkey=Haiti+2015
   }
 ]
 ```
+
+---
+[Home](/README.md)  
