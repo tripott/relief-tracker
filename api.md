@@ -161,7 +161,7 @@ Request the next page relief efforts using the `name` value of the last item in 
 ]
 ```
 
-## [GET /reliefefforts/{id}](http://relief-service.cfapps.io/relief_St_Phillips_Haiti_2017)
+## [GET /reliefefforts/{id}](http://relief-service.cfapps.io/reliefefforts/relief_St_Phillips_Haiti_2017)
 
 View a relief effort.
 
