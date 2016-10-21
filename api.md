@@ -1,6 +1,9 @@
+[Home](/README.md)  |  [User Stories](/user-stories.md)  |  [Basics](/basics.md)  |  [API Endpoints](/api.md)  |  [Entity Reference](/entity-reference.md)
+---
+
 # Relief Tracker API Endpoints
 
-[Home](/README.md)
+## Relief Efforts
 
 ## [GET /reliefefforts](http://relief-service.cfapps.io/reliefefforts)
 
@@ -344,5 +347,117 @@ Attempting to delete a resource that does not exist result in a `404`:
 }
 ```
 
+##  PERSONS
+
+## [GET /persons](http://relief-service.cfapps.io/persons)
+
+Lists relief efforts.
+
+As a user, I want to page through a list of relief efforts.  Relief efforts should be sorted by relief effort name. Each relief effort item should display the relief effort name, organization, and start date. Once I find the relief effort I'm looking for, I'd like to view the relief effort details see `GET /reliefefforts/{id}`.
+
+<table>
+  <tr>
+    <th>HTTP Verb</th>
+    <th>GET</th>
+  </tr>
+  <tr>
+    <td>Route</td>
+    <td>`/reliefefforts`</td>
+  </tr>
+  <tr>
+    <td>Request parameter</td>
+    <td>`sortby` - string. Sorts relief effort documents. Use a value of `name` to sort by relief effort name.  Default sort is `name` if `sortby` request parameter is omitted. </td>
+  </tr>
+  <tr>
+    <td>Request parameter</td>
+    <td>`limit` - integer. limits the number of relief effort documents returned.  Default is `5`.</td>
+  </tr>
+  <tr>
+    <td>Request parameter</td>
+    <td>`startkey` - string. Offsetting (skipping) x number of documents is a potentially expensive operation for a database. Using a “last searched token” like `startkey` allows you to skip over prior results. If provided, the results will list relief efforts _greater than_ the token/startkey.  If not provided, the results will start from the _beginning of the list_.  For example `startkey=Haiti+2015` skips all relief efforts whose `sortby` is less than or equal to "Haiti 2015".</td>
+  </tr>
+  <tr>
+    <td>Content-Type</td>
+    <td>application/json</td>
+  </tr>
+</table>
+
+### Simple list example ###
+
+Request a simple list of relief efforts sorted by name.  Default `sortby` value is `name`.  The following two examples will retrieve the same results.  By default the response will be limited to 5 records per page.
+
+[GET /reliefefforts](http://relief-service.cfapps.io/reliefefforts)
+
+[GET /reliefefforts?sortby=name](http://relief-service.cfapps.io/reliefefforts?sortby=name)
+
+### List with limit example ###
+
+Request a list of relief efforts by name and limit to 3 records per page.
+
+[GET /reliefefforts?sortby=name&limit=3](http://relief-service.cfapps.io/reliefefforts?sortby=name&limit=3)
+
+### List with pagination example ###
+
+Request the first page of relief effort sorted by name and limited to 3 records.
+
+[GET /reliefefforts?sortby=name&limit=3](http://relief-service.cfapps.io/reliefefforts?sortby=name&limit=3)
+
+```
+[
+  {
+    "_id": "relief_St_Phillips_Dominican_Republic_2016",
+    "_rev": "10-3c10861534dcc89028b58429a23052ae",
+    "type": "relief",
+    "phase": "completed",
+    "name": "Dominican_Republic 2016",
+    "organizationID": "St. Phillips",
+    "desc": "...",
+    "start": "2015-11-25",
+    "end": "2015-10-01",
+    "social": [],
+    "team": [ ... ],
+    "objectives": [ ... ]
+  },
+  {
+    "_id": "relief_Red_Cross_Guatemala_2016",
+    "_rev": "1-b5792aecc07099d79d3ec8462ebc6aa8",
+    "type": "relief",
+    "phase": "completed",
+    "name": "Guatemala 2016",
+    "organizationID": "Red Cross",
+    "desc": "...",
+    "start": "2016-01-05",
+    "end": "2016-02-15",
+    "active": true
+  },
+  {
+    "_id": "relief_St_Phillips_Haiti_2015",
+    "_rev": "8-16b393021bb03047ffe7606141a802aa",
+    "type": "relief",
+    "phase": "completed",
+    "tags": [
+      "education"
+    ],
+    "name": "Haiti 2015",
+    "organizationID": "St. Phillips",
+    "desc": "...",
+    "start": "2015-09-25",
+    "end": "2015-10-01",
+    "social": [],
+    "team": [ ... ],
+    "objectives": [ ... ],
+    "map": [ ... ]
+  }
+]
+```
+
+Request the next page relief efforts using the `name` value of the last item in the previous page as the `startkey` value.  This skips the previous documents and provides performant pagination.  
+
+[GET /persons?limit=3&sortby=name&startkey=Onassis]()
+
+```
+sample data here
+```
+
 ---
-[Home](/README.md)
+[Home](/README.md)  |  [User Stories](/user-stories.md)  |  [Basics](/basics.md)  |  [API Endpoints](/api.md)  |[Entity Reference](/entity-reference.md)

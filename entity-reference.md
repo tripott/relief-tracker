@@ -1,10 +1,28 @@
+[Home](/README.md)  |  [User Stories](/user-stories.md)  |  [Basics](/basics.md)  |  [API Endpoints](/api.md)  |  [Entity Reference](/entity-reference.md)
+---
+
 # Entity Reference
 
-[Home](/README.md)  
+## Person
+
+In no sql mode, a person document includes a `_rev` value.
+
+```
+{
+  _id: "person_stevean@duke.edu",
+  _rev: "4-34220f8dff4e9ece78316937c0202f55",
+  type: "person",
+  firstName: "Steve",
+  lastName: "Ananias",
+  phone: "843 555-1515",
+  email: "stevean@duke.edu",
+  active: true
+}
+```
 
 ## Relief Effort
 
-In no sql mode, a relief effort document includes a `_rev` value:
+In no sql mode, a relief effort document includes a `_rev` value.  
 
 ```
 {
@@ -100,4 +118,4 @@ In no sql mode, a relief effort document includes a `_rev` value:
 ```
 
 ---
-[Home](/README.md)  
+[Home](/README.md)  |  [User Stories](/user-stories.md)  |  [Basics](/basics.md)  |  [API Endpoints](/api.md)  |  [Entity Reference](/entity-reference.md)

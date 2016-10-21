@@ -1,6 +1,8 @@
-# Basics
+[Home](/README.md)  |  [User Stories](/user-stories.md)  |  [Basics](/basics.md)  |  [API Endpoints](/api.md)  |  [Entity Reference](/entity-reference.md)
+---
 
-[Home](/README.md)   
+
+# Basics
 
 ## Base URL
 
@@ -8,6 +10,19 @@
   <tr>
     <th>Base URL</th>
     <th>http://relief-service.cfapps.io/</th>
+  </tr>
+</table>
+
+## Endpoints
+
+<table>
+  <tr>
+    <th>Persons</th>
+    <th>http://relief-service.cfapps.io/persons</th>
+  </tr>
+  <tr>
+    <th>Relief Efforts</th>
+    <th>http://relief-service.cfapps.io/reliefefforts</th>
   </tr>
 </table>
 
@@ -159,4 +174,4 @@ GET /reliefefforts?limit=3&sortby=name&startkey=Haiti+2015
 ```
 
 ---
-[Home](/README.md)  
+[Home](/README.md)  |  [User Stories](/user-stories.md)  |  [Basics](/basics.md)  |  [API Endpoints](/api.md)  |[Entity Reference](/entity-reference.md)

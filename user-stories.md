@@ -1,6 +1,8 @@
-# Relief Tracker User Stories
+[Home](/README.md)  |  [User Stories](/user-stories.md)  |  [Basics](/basics.md)  |  [API Endpoints](/api.md)  |  [Entity Reference](/entity-reference.md)
+---
 
-[Home](/README.md)  
+
+# Relief Tracker User Stories
 
 A full stack javascript sample application.
 
@@ -191,4 +193,4 @@ As a user, I want the ability to edit marker details.
 As a user, I want the ability to remove a marker from the map.
 
 ---
-[Home](/README.md)  
+[Home](/README.md)  |  [User Stories](/user-stories.md)  |  [Basics](/basics.md)  |  [API Endpoints](/api.md)  |  [Entity Reference](/entity-reference.md)
