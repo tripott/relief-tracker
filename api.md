@@ -2,7 +2,7 @@
 
 [Home](/README.md)
 
-## `GET /reliefefforts`
+## [GET /reliefefforts](http://relief-service.cfapps.io/reliefefforts)
 
 Lists relief efforts.
 
@@ -42,15 +42,16 @@ As a user, I want to page through a list of relief efforts.  Relief efforts shou
 Request a simple list of relief efforts sorted by name.  Default `sortby` value is `name`.  The following two examples will retrieve the same results.  By default the response will be limited to 5 records per page.
 
 ```
-GET /reliefefforts
-GET /reliefefforts?sortby=name
+[GET /reliefefforts](http://relief-service.cfapps.io/reliefefforts)
+
+[GET /reliefefforts?sortby=name](http://relief-service.cfapps.io/reliefefforts?sortby=name)
 ```
 ** List with limit example**
 
 Request a list of relief efforts by name and limit to 3 records per page.
 
 ```
-GET /reliefefforts?sortby=name&limit=3
+[GET /reliefefforts?sortby=name&limit=3](http://relief-service.cfapps.io/reliefefforts?sortby=name&limit=3)
 ```
 
 ** List with pagination example **
@@ -58,7 +59,7 @@ GET /reliefefforts?sortby=name&limit=3
 Request the first page of relief effort sorted by name and limited to 3 records.
 
 ```
-GET /reliefefforts?sortby=name&limit=3
+[GET /reliefefforts?sortby=name&limit=3](http://relief-service.cfapps.io/reliefefforts?sortby=name&limit=3)
 
 [
   {
@@ -112,7 +113,7 @@ GET /reliefefforts?sortby=name&limit=3
 Request the next page relief efforts using the `name` value of the last item in the previous page as the `startkey` value.  This skips the previous documents and provides performant pagination.  
 
 ```
-GET /reliefefforts?limit=3&sortby=name&startkey=Haiti+2015
+[GET /reliefefforts?limit=3&sortby=name&startkey=Haiti+2015](http://relief-service.cfapps.io/reliefefforts?limit=3&sortby=name&startkey=Haiti+2015)
 
 [
   {
@@ -160,7 +161,7 @@ GET /reliefefforts?limit=3&sortby=name&startkey=Haiti+2015
 ]
 ```
 
-## `GET /reliefefforts/{id}`
+## [GET /reliefefforts/{id}](http://relief-service.cfapps.io/relief_St_Phillips_Haiti_2017)
 
 View a relief effort.
 
@@ -190,7 +191,7 @@ As a user, I want to view all the details about a relief effort such as start da
 Get a single relief effort using the `_id` of a relief effort in the route.
 
 ```
-GET /reliefefforts/relief_St_Phillips_Haiti_2017
+[GET /reliefefforts/relief_St_Phillips_Haiti_2017](http://relief-service.cfapps.io/reliefefforts/relief_St_Phillips_Haiti_2017)
 
 {
   "_id": "relief_St_Phillips_Haiti_2017",
@@ -227,7 +228,7 @@ Attempting to retrieve a resource that does not exist result in a `404`:
 }
 ```
 
-## `PUT /reliefefforts/{id}`
+## PUT /reliefefforts/{id}
 
 Edits a relief effort.
 
@@ -261,7 +262,7 @@ As a user, I want the ability to edit the following high level details about a r
 Update a relief effort by sending an HTTP PUT request containing the entire relief effort document in the body of the request.  
 
 ```
-PUT http://localhost:4000/reliefefforts/relief_St_Phillips_Haiti_2017
+PUT /reliefefforts/relief_St_Phillips_Haiti_2017
 
 {
   "_id": "relief_St_Phillips_Haiti_2017",
@@ -302,7 +303,7 @@ Attempting to update a resource that does not exist results in a `404`:
 }
 ```
 
-## `DELETE /reliefefforts/{id}`
+## DELETE /reliefefforts/{id}
 
 Deletes a relief effort.
 
