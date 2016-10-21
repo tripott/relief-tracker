@@ -35,9 +35,7 @@ As a user, I want to page through a list of relief efforts.  Relief efforts shou
   </tr>
 </table>
 
-### Examples ###
-
-** Simple list example**
+### Simple list example ###
 
 Request a simple list of relief efforts sorted by name.  Default `sortby` value is `name`.  The following two examples will retrieve the same results.  By default the response will be limited to 5 records per page.
 
@@ -45,13 +43,13 @@ Request a simple list of relief efforts sorted by name.  Default `sortby` value 
 
 [GET /reliefefforts?sortby=name](http://relief-service.cfapps.io/reliefefforts?sortby=name)
 
-** List with limit example**
+### List with limit example ###
 
 Request a list of relief efforts by name and limit to 3 records per page.
 
 [GET /reliefefforts?sortby=name&limit=3](http://relief-service.cfapps.io/reliefefforts?sortby=name&limit=3)
 
-** List with pagination example **
+### List with pagination example ###
 
 Request the first page of relief effort sorted by name and limited to 3 records.
 
@@ -182,7 +180,7 @@ As a user, I want to view all the details about a relief effort such as start da
   </tr>
 </table>
 
-** View relief effort example **
+### View relief effort example ###
 
 Get a single relief effort using the `_id` of a relief effort in the route.
 
@@ -253,7 +251,7 @@ As a user, I want the ability to edit the following high level details about a r
 
 </table>
 
-** Edit relief effort example **
+### Edit relief effort example ###
 
 Update a relief effort by sending an HTTP PUT request containing the entire relief effort document in the body of the request.  
 
