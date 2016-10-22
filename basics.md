@@ -1,7 +1,6 @@
 [Home](/README.md)  |  [User Stories](/user-stories.md)  |  [Basics](/basics.md)  |  [API Endpoints](/api.md)  |  [Entity Reference](/entity-reference.md)
 ---
 
-
 # Basics
 
 ## Base URL
